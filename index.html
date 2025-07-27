@@ -17,14 +17,38 @@
   <!-- Welcome/About -->
   <section class="about">
     <h2><i class="bi bi-lightbulb-fill"></i> Welcome to the Innovation Rakhi Stall!</h2>
-    <p>💛 From Aryans House, we bring you the perfect mix of tradition and tech. Experience our <strong>self-stopping Rakhi car</strong>, give feedback, take selfies, win prizes & more — all from your phone!</p>
+    <p>💛 From Aryans House, we bring you the perfect blend of tradition and technology. Explore our <strong>self-stopping Rakhi car</strong>, selfie station, prize wheel, and games — all from your mobile!</p>
   </section>
 
-  <!-- Feedback -->
+  <!-- Rakhi Info (Gujarati + English) -->
+  <section class="rakhi-history">
+    <h2><i class="bi bi-book-half"></i> Raksha Bandhan History / રક્ષાબંધન ઇતિહાસ</h2>
+    
+    <h3>📖 In English:</h3>
+    <p>Raksha Bandhan is a sacred celebration of the bond between a brother and sister. On this day, sisters tie a Rakhi on their brother's wrist, praying for his well-being. In return, brothers vow to protect their sisters.</p>
+    <p>Legends include Draupadi tying cloth on Krishna’s wound, symbolizing lifelong protection, and Rani Karnavati sending a Rakhi to Emperor Humayun for help. The festival continues today as a joyful cultural tradition.</p>
+
+    <h3>📖 ગુજરાતી માં:</h3>
+    <p>રક્ષાબંધન એ ભાઈ-બહેનના પ્રેમનો પાવન તહેવાર છે. બહેન ભાઈને રાખડી બાંધે છે અને તેની સલામતી માટે પ્રાર્થના કરે છે. ભાઈ પણ બહેનનું રક્ષણ કરવાનું વચન આપે છે.</p>
+    <p>દ્રૌપદીએ કૃષ્ણના ઘા પર કપડો બાંધ્યો, જે તેમનો શાશ્વત સંબંધ દર્શાવે છે. રાણી કર્ણાવતીએ હુમાયુને રાખડી મોકલી મદદ માગી હતી. આજના સમયમાં પણ રક્ષાબંધન પ્રેમ અને પરિવારનો તહેવાર છે.</p>
+  </section>
+
+  <!-- Feedback + Selfie -->
   <section id="feedback">
     <h2><i class="bi bi-chat-left-dots-fill"></i> Feedback Form</h2>
+
     <input type="text" id="feedbackName" placeholder="👤 Your Name" />
     <textarea id="feedbackText" rows="4" placeholder="📝 How was your Rakhi experience?"></textarea>
+    
+    <input type="number" id="feedbackRakhis" placeholder="🎁 How many Rakhis bought?" />
+    <input type="number" id="feedbackRs" placeholder="💰 Total payment made (Rs.)" />
+
+    <h3><i class="bi bi-camera-fill"></i> Capture Your Selfie 📸</h3>
+    <video id="video" autoplay></video>
+    <canvas id="canvas" width="300" height="200"></canvas>
+    <button id="captureBtn"><i class="bi bi-camera2"></i> Capture Selfie</button>
+
+    <br><br>
     <button id="submitFeedback"><i class="bi bi-send-fill"></i> Submit Feedback</button>
   </section>
 
@@ -45,15 +69,17 @@
     <!-- Guessing Game -->
     <div class="game-block">
       <h3><i class="bi bi-question-diamond-fill"></i> Guess the Number 🎯</h3>
-      <p>Guess a number between 1 and 100</p>
+      <input type="text" id="guessName" placeholder="👤 Your Name" />
+      <p>Guess a number between 1 and 100 (10 chances)</p>
       <input type="number" id="guessInput" placeholder="Enter guess"/>
       <button id="guessBtn">🎲 Try</button>
       <p id="gameMessage"></p>
     </div>
 
-    <!-- New Game -->
+    <!-- Tap Game -->
     <div class="game-block">
       <h3><i class="bi bi-mouse2-fill"></i> Tap the Circle 🟡</h3>
+      <input type="text" id="tapName" placeholder="👤 Your Name" />
       <p>Tap fast and beat the timer!</p>
       <button id="startTapGame">▶️ Start</button>
       <div id="tapGameArea" class="hidden">
@@ -61,14 +87,6 @@
         <p>Score: <span id="tapScore">0</span></p>
       </div>
     </div>
-  </section>
-
-  <!-- Selfie Point -->
-  <section id="selfie">
-    <h2><i class="bi bi-camera-fill"></i> Selfie Point 📸</h2>
-    <video id="video" autoplay></video>
-    <canvas id="canvas" width="300" height="200"></canvas>
-    <button id="captureBtn"><i class="bi bi-camera2"></i> Capture</button>
   </section>
 
   <!-- Footer -->
@@ -87,10 +105,8 @@
     </ul>
   </nav>
 
-  <!-- Firebase SDK -->
-  
-
+  <!-- Firebase + JS -->
   <script type="module" src="script.js"></script>
-
 </body>
 </html>
+
