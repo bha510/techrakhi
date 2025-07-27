@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aryans House Rakhi Tech</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- Fixed Header -->
+  <header>
+    <h1><i class="bi bi-stars"></i> Aryans Rakhi Tech Stall 💛</h1>
+  </header>
+<br><br><br><br><br><br>
+  <!-- Welcome/About -->
+  <section class="about">
+    <h2><i class="bi bi-lightbulb-fill"></i> Welcome to the Innovation Rakhi Stall!</h2>
+    <p>💛 From Aryans House, we bring you the perfect mix of tradition and tech. Experience our <strong>self-stopping Rakhi car</strong>, give feedback, take selfies, win prizes & more — all from your phone!</p>
+  </section>
+
+  <!-- Feedback -->
+  <section id="feedback">
+    <h2><i class="bi bi-chat-left-dots-fill"></i> Feedback Form</h2>
+    <input type="text" id="feedbackName" placeholder="👤 Your Name" />
+    <textarea id="feedbackText" rows="4" placeholder="📝 How was your Rakhi experience?"></textarea>
+    <button id="submitFeedback"><i class="bi bi-send-fill"></i> Submit Feedback</button>
+  </section>
+
+  <!-- Spin Wheel -->
+  <section id="spin">
+    <h2><i class="bi bi-arrow-repeat"></i> Spin to Win 🎉</h2>
+    <p><strong>Only 1 spin per user</strong> — Enter your name below:</p>
+    <input type="text" id="spinName" placeholder="🧒 Your Name" />
+    <canvas id="wheelCanvas" width="300" height="300"></canvas>
+    <button id="spinBtn"><i class="bi bi-controller"></i> Spin Now</button>
+    <p id="spin-result"></p>
+  </section>
+
+  <!-- Games Section -->
+  <section id="games">
+    <h2><i class="bi bi-puzzle-fill"></i> Play & Win</h2>
+
+    <!-- Guessing Game -->
+    <div class="game-block">
+      <h3><i class="bi bi-question-diamond-fill"></i> Guess the Number 🎯</h3>
+      <p>Guess a number between 1 and 100</p>
+      <input type="number" id="guessInput" placeholder="Enter guess"/>
+      <button id="guessBtn">🎲 Try</button>
+      <p id="gameMessage"></p>
+    </div>
+
+    <!-- New Game -->
+    <div class="game-block">
+      <h3><i class="bi bi-mouse2-fill"></i> Tap the Circle 🟡</h3>
+      <p>Tap fast and beat the timer!</p>
+      <button id="startTapGame">▶️ Start</button>
+      <div id="tapGameArea" class="hidden">
+        <button id="circleTap">🟡 Tap!</button>
+        <p>Score: <span id="tapScore">0</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selfie Point -->
+  <section id="selfie">
+    <h2><i class="bi bi-camera-fill"></i> Selfie Point 📸</h2>
+    <video id="video" autoplay></video>
+    <canvas id="canvas" width="300" height="200"></canvas>
+    <button id="captureBtn"><i class="bi bi-camera2"></i> Capture</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>💛 Made with ❤️ by Aryans House | Rakhi Tech 2025</p>
+  </footer>
+
+  <!-- Mobile Bottom Navbar -->
+  <nav class="bottom-nav">
+    <ul>
+      <li><i class="bi bi-house-door-fill"></i><span>Home</span></li>
+      <li><i class="bi bi-chat-dots-fill"></i><span>Feedback</span></li>
+      <li><i class="bi bi-arrow-repeat"></i><span>Spin</span></li>
+      <li><i class="bi bi-puzzle-fill"></i><span>Games</span></li>
+      <li><i class="bi bi-camera"></i><span>Selfie</span></li>
+    </ul>
+  </nav>
+
+  <!-- Firebase SDK -->
+  
+
+  <script type="module" src="script.js"></script>
+
+</body>
+</html>
