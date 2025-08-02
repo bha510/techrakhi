@@ -34,7 +34,7 @@ async function countActions(collName) {
 // ----- SPIN WHEEL -----
 const canvas = document.getElementById("wheelCanvas");
 const ctx = canvas.getContext("2d");
-const segments = ["5%", "10%", "Secret Msg", "100%", "4 Rakhis", "play Ring Game"];
+const segments = ["5%", "10%", "Secret Msg", "9%", "2 Rakhis", "play ball Game"];
 const spinBtn = document.getElementById("spinBtn");
 const spinOutput = document.getElementById("spin-result");
 
@@ -178,3 +178,4 @@ document.getElementById("startTapGame").addEventListener("click", async () => {
     document.getElementById("tapScore").textContent = score;
   };
 });
+
